@@ -1,9 +1,8 @@
 # My Dotfiles
 
-My personal configuration files for **Arch Linux, managed with GNU Stow.
+My personal configuration files for **Arch Linux**, managed with GNU Stow.
 Focused on a clean, keyboard-centric workflow using **Niri** (Wayland) and **Neovim**.
 
-![Screenshot](https://via.placeholder.com/800x450?text=Place+Your+Screenshot+Here)
 ## 🛠️ The Stack
 
 | Category | Tool |
@@ -28,3 +27,4 @@ git clone [https://github.com/YOUR_USERNAME/dotfiles.git](https://github.com/YOU
 cd ~/dotfiles
 chmod +x setup.sh
 ./setup.sh
+```
