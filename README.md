@@ -28,3 +28,18 @@ cd ~/dotfiles
 chmod +x setup.sh
 ./setup.sh
 ```
+If you only want specific configurations, run stow followed by the folder name:
+```bash
+cd ~/dotfiles
+
+# Core
+stow zsh        # Shell configuration
+stow git        # Git config
+stow nvim       # Neovim (LazyVim)
+
+# Desktop / GUI
+stow niri       # Window Manager
+stow waybar     # Status Bar
+stow rofi       # App Launcher
+stow ghostty    # Terminal
+```
