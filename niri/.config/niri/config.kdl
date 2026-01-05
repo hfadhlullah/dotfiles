@@ -47,7 +47,6 @@ output "DP-2" {
 
 binds {
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
-
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn-sh "ghostty"; }
     Mod+SPACE                           hotkey-overlay-title="Open App Launcher: rofi" { spawn "sh" "-c" "pkill -x rofi || rofi -show combi";}
@@ -55,12 +54,12 @@ binds {
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
     // Please choose your own file manager
-    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
+    MOD+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
 
     // ─── Audio Controls ───
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
@@ -72,6 +71,7 @@ binds {
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }
 
+    MOD+SHIFT+W                         { spawn "pkill" "-SIGUSR2" "waybar"; }
     MOD+LEFT                            { focus-column-left; }
     MOD+H                               { focus-column-left; }
     MOD+RIGHT                           { focus-column-right; }
@@ -159,9 +159,9 @@ binds {
     CTRL+MOD+SPACE                      { spawn-sh "~/.local/bin/wallpaper-cycle"; }
 
     // ─── Screenshots ───
-    CTRL+SHIFT+1                        { screenshot; }
-    CTRL+SHIFT+2                        { screenshot-screen; }
-    CTRL+SHIFT+3                        { screenshot-window; }
+    CTRL+SHIFT+ALT+S                        { screenshot; }
+    CTRL+SHIFT+ALT+P                        { screenshot-screen; }
+    CTRL+SHIFT+ALT+1                        { screenshot-window; }
 
     // ─── Emergency Escape Key ───
     // Use this when a fullscreen app blocks your keybinds.

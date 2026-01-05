@@ -83,6 +83,7 @@ tooltip {
     background-color: #0f1117;
     color: #c0c0c0;
     padding: 4px 8px;
+    border: 2px solid #206085;
 }
 
 /* Taskbar */
@@ -110,6 +111,30 @@ tooltip {
     padding: 4px 10px;
 }
 
+/* Standard state */
+#pulseaudio {
+    color: #cdd6f4; 
+}
+
+/* 2. WARNING STATE (90% - 99%) */
+/* This is where the RED starts */
+#pulseaudio.good {
+    color: #cdd6f4; 
+}
+
+/* 3. CRITICAL STATE (100%) */
+/* Red and Bold */
+#pulseaudio.critical {
+    color: #f38ba8;
+    font-weight: bold;
+
+    /* Animation Settings */
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 /* Battery critical warning */
 /* #battery.critical:not(.charging) { */
 /*     background-color: #e65100; */
@@ -119,7 +144,7 @@ tooltip {
 
 @keyframes blink {
     to {
-        background-color: #0f1117;
+        /* background-color: #0f1117; */
         color: #ffffff;
     }
 }

@@ -24,5 +24,13 @@
         "pulseaudio",
         "clock",
         "custom/exit"
-    ]
+    ],
+
+    // --- Configuration Block ---
+    "pulseaudio": {
+        "states": {
+          "good": 101,
+          "critical": 120
+        }
+    }
 }
