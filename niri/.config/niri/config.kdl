@@ -179,7 +179,6 @@ binds {
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    spawn-sh-at-startup "swww img ~/Pictures/Wallpapers/1234307.jpg"  // Set wallpaper
     spawn-sh-at-startup "waybar" // Launch waybar
 
     prefer-no-csd // Disable program decorations
