@@ -1,156 +1,73 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
 }
 
 window#waybar {
-    background-color: #000000;
-    font-size: 14px;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 0;
+    background: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: white;
 }
 
-/* Left-most: Arch icon */
-#custom-appmenu {
-  font-size: 4;
-  background-image: url('/usr/share/icons/cachyos.svg');
-  background-color: #000000;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0px 12px;
-}
-
-/* Right-most: Clock */
-#clock {
-    font-size: 14px;
-    background-color: #1e222a;
-    color: #c0c0c0;
-    border-radius: 0px;
-    padding: 0px 8px;
-}
-
-/* Active window title */
-#window {
-    font-size: 14px;
-    font-weight: 800;
-    color: #e0e0e0;
-    border-radius: 0px;
-    padding: 4px 12px;
-    background-color: #1e222a;
-}
-
-/* Workspace container */
-#niri-workspaces {
-    background: #206085;
-    font-weight: bold;
-    border-radius: 0px;
-    font-size: 8px;
-    color: #e0e0e0;
-}
-
-/* Individual workspace buttons */
-#niri-workspaces button {
-    border-radius: 0px;
-    font-size: 8px;
-    color: #000000; 
-}
-
-#workspaces button.active {
-    border-radius: 0px;
-    color: #0f1117;
-    background: #206085;
-}
-
-#workspaces button:hover {
-    border-radius: 0px;
-    background: #0a324a;
-    border-width: 0px;
-}
-
-/* Power/exit button */
-#custom-exit {
-    background-color: #206085;
-    font-size: 14px;
-    font-weight: 800;
-    color: #ffffff;
-    padding: 0px 6px;
-}
-
-/* Tooltips */
 tooltip {
-    border-radius: 12px;
-    background-color: #0f1117;
-    color: #c0c0c0;
-    padding: 4px 8px;
-    border: 2px solid #206085;
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
 }
 
-/* Taskbar */
-#taskbar {
-    background-color: #1e222a;
-    margin: 0px;
-    border-radius: 0px;
-    font-weight: normal;
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
 }
 
-#custom-audio-port {
-  padding: 0 8px;
-  color: #cdd6f4;
+#workspaces button.focused {
+    background: #64727D;
+    border-bottom: 3px solid white;
 }
 
-
-/* All system info modules */
-#backlight,
-#pulseaudio,
-#network,
-#bluetooth,
-#battery,
-#tray,
-#custom-updates,
-#custom-notification {
-    background-color: #1e222a;
-    font-size: 14px;
-    font-weight: 800;
-    color: #c0c0c0;
-    border-radius: 0px;
-    padding: 4px 10px;
+#mode, #clock, #battery {
+    padding: 0 10px;
 }
 
-/* Standard state */
-#pulseaudio {
-    color: #cdd6f4; 
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
 }
 
-/* 2. WARNING STATE (90% - 99%) */
-/* This is where the RED starts */
-#pulseaudio.good {
-    color: #cdd6f4; 
+#clock {
+    background-color: #64727D;
 }
 
-/* 3. CRITICAL STATE (100%) */
-/* Red and Bold */
-#pulseaudio.critical {
-    color: #f38ba8;
-    font-weight: bold;
-
-    /* Animation Settings */
-    animation-name: blink;
-    animation-duration: 0.2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#battery {
+    background-color: #ffffff;
+    color: black;
 }
-/* Battery critical warning */
-/* #battery.critical:not(.charging) { */
-/*     background-color: #e65100; */
-/*     color: #ffffff; */
-/*     animation: blink 0.5s linear infinite alternate; */
-/* } */
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
 
 @keyframes blink {
     to {
-        /* background-color: #0f1117; */
-        color: #ffffff;
+        background-color: #ffffff;
+        color: black;
     }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
