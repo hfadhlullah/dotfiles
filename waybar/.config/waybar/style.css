@@ -94,6 +94,12 @@ tooltip {
     font-weight: normal;
 }
 
+#custom-audio-port {
+  padding: 0 8px;
+  color: #cdd6f4;
+}
+
+
 /* All system info modules */
 #backlight,
 #pulseaudio,

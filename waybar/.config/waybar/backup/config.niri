@@ -22,6 +22,7 @@
     "modules-right": [
         "tray",
         "pulseaudio",
+        "custom/audio-port",
         "clock",
         "custom/exit"
     ],
@@ -32,5 +33,13 @@
           "good": 101,
           "critical": 120
         }
+    }, 
+
+    "custom/audio-port": {
+      "exec": "~/.config/waybar/scripts/audio-port-status.sh",
+      "interval": 2,
+      "on-click": "~/.config/waybar/scripts/audio-port-toggle.sh",
+      "tooltip": true,
+      "return-type": "text"
     }
 }

@@ -12,11 +12,11 @@ $git_state\
 $git_status](bold bg:black fg:white)\
 $fill\
 $cmd_duration\
-[](fg:red bg:black)\
-[ ](fg:black bg:red)\
+[](fg:white bg:black)\
+[ ](fg:black bg:white)\
 $username\
-[](fg:green bg:bright-black)\
-[󰌽 ](fg:green bg:black inverted)\
+[](fg:white bg:bright-black)\
+[󰌽 ](fg:white bg:black inverted)\
 $hostname\
 $line_break\
 [‎]()"""
@@ -58,7 +58,7 @@ format = "[ $hostname ]($style)"
 ssh_only = false
 trim_at = ".companyname.com"
 disabled = false
-style = "fg:green bg:bright-black"
+style = "fg:white bg:bright-black"
 
 [git_commit]
 commit_hash_length = 8

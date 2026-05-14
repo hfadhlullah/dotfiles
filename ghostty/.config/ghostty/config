@@ -54,3 +54,8 @@ font-style = Regular
 font-size = 16
 
 theme = Catppuccin Mocha
+
+cursor-style = bar
+cursor-style-blink = true
+
+custom-shader = ~/.config/ghostty/shaders/ghostty-cursor-trails/cursor_smear.glsl

@@ -24,7 +24,7 @@ input {
     }
 
     // focus-follows-mouse // Automatically focus windows under the mouse pointer
-    // warp-mouse-to-focus
+    warp-mouse-to-focus
     workspace-auto-back-and-forth // Enable workspace back & forth switching
     disable-power-key-handling
   }
@@ -46,6 +46,24 @@ input {
   //  variable-refresh-rate on-demand=true
   //  focus-at-startup
 //}
+
+// ────────────── Workspace ──────────────
+
+workspace "code" {
+    open-on-output "DP-2"
+}
+
+workspace "preview" {
+    open-on-output "DP-2"
+}
+
+workspace "media" {
+    open-on-output "DP-2"
+}
+
+workspace "browser" {
+    open-on-output "DP-2"
+}
 
 // ────────────── Keybindings ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
@@ -127,20 +145,20 @@ binds {
     MOD+CTRL+SHIFT+WHEELSCROLLDOWN      { move-column-right; }
     MOD+CTRL+SHIFT+WHEELSCROLLUP        { move-column-left; }
 
-    MOD+1                               { focus-workspace 1; }
-    MOD+2                               { focus-workspace 2; }
-    MOD+3                               { focus-workspace 3; }
-    MOD+4                               { focus-workspace 4; }
+    MOD+1                               { focus-workspace "code"; }
+    MOD+2                               { focus-workspace "preview"; }
+    MOD+3                               { focus-workspace "media"; }
+    MOD+4                               { focus-workspace "browser"; }
     MOD+5                               { focus-workspace 5; }
     MOD+6                               { focus-workspace 6; }
     MOD+7                               { focus-workspace 7; }
     MOD+8                               { focus-workspace 8; }
     MOD+9                               { focus-workspace 9; }
 
-    MOD+CTRL+1                          { move-column-to-workspace 1; }
-    MOD+CTRL+2                          { move-column-to-workspace 2; }
-    MOD+CTRL+3                          { move-column-to-workspace 3; }
-    MOD+CTRL+4                          { move-column-to-workspace 4; }
+    MOD+CTRL+1                          { move-column-to-workspace "code"; }
+    MOD+CTRL+2                          { move-column-to-workspace "preview"; }
+    MOD+CTRL+3                          { move-column-to-workspace "media"; }
+    MOD+CTRL+4                          { move-column-to-workspace "browser"; }
     MOD+CTRL+5                          { move-column-to-workspace 5; }
     MOD+CTRL+6                          { move-column-to-workspace 6; }
     MOD+CTRL+7                          { move-column-to-workspace 7; }
