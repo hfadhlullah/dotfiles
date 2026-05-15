@@ -1,0 +1,26 @@
+# Core shell/editor/workflow packages
+git
+stow
+zsh
+bash-completion
+tmux
+starship
+neovim
+ripgrep
+yazi
+zoxide
+pre-commit
+openssh
+rsync
+wget
+which
+less
+man-db
+man-pages
+micro
+gum
+bind
+duf
+btop
+wl-clipboard
+wl-clip-persist

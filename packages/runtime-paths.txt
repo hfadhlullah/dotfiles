@@ -1,0 +1,6 @@
+forge=/home/rzr/.local/bin/forge
+node=/home/rzr/.nvm/versions/node/v25.2.1/bin/node
+npm=/home/rzr/.nvm/versions/node/v25.2.1/bin/npm
+bun=/home/rzr/.nvm/versions/node/v25.2.1/bin/bun
+flutter=/home/rzr/tools/flutter/bin/flutter
+adb=/home/rzr/Android/Sdk/platform-tools/adb

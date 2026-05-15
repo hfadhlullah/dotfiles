@@ -1,0 +1,20 @@
+# Commands referenced by configs and workflows.
+# Some may be intentionally installed manually later.
+ghostty
+zsh
+starship
+tmux
+nvim
+rofi
+chromium
+keepassxc
+obsidian
+btop
+forge
+yazi
+vicinae
+flutter
+adb
+node
+npm
+bun

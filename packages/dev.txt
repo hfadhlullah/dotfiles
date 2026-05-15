@@ -1,0 +1,20 @@
+# Development packages and tools
+docker
+docker-compose
+composer
+php
+php-gd
+php-pgsql
+php-sqlite
+php-xsl
+maven
+python
+android-tools
+android-studio
+nvm
+uv
+claude-code
+opencode-desktop-bin
+antigravity
+dbeaver-ce-bin
+ngrok

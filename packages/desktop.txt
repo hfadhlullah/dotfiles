@@ -1,0 +1,24 @@
+# Desktop and application packages used by current configs/workflow
+ghostty
+kitty
+waybar
+rofi
+dunst
+chromium
+obsidian
+keepassxc
+discord
+telegram-desktop
+spotify-launcher
+localsend
+vicinae-bin
+antigravity
+openrgb
+nwg-look
+nwg-displays
+network-manager-applet
+pavucontrol
+brightnessctl
+cliphist
+satty
+udiskie
