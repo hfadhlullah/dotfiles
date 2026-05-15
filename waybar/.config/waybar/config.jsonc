@@ -1,59 +1,77 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 30,
-    "spacing": 8,
-
+    "output": [
+        "*"
+    ],
+    "height": 10,
+    "exclusive": true,
+    "passthrough": false,
+    "reload_style_on_change": true,
+    "include": [
+        "$XDG_CONFIG_HOME/waybar/modules/*json*", 
+        "$XDG_CONFIG_HOME/waybar/includes/includes.json" 
+    ],
     "modules-left": [
-        "hyprland/workspaces"
+        "group/pill#left1",
+        "group/pill#left2"
     ],
-
+    "group/pill#left1": {
+        "orientation": "inherit",
+        "modules": [
+            "cpu",
+            "memory"
+        ]
+    },
+    "group/pill#left2": {
+        "orientation": "inherit",
+        "modules": [
+            "idle_inhibitor",
+            "clock"
+        ]
+    },
     "modules-center": [
-        "hyprland/window"
+        "group/pill#center"
     ],
-
+    "group/pill#center": {
+        "modules": [
+            "hyprland/workspaces",
+            "hyprland/window"
+        ],
+        "orientation": "inherit"
+    },
     "modules-right": [
-        "tray",
-        "pulseaudio",
-        "network",
-        "clock"
+        "group/pill#right1",
+        "group/pill#right2",
+        "group/pill#right3"
     ],
-
-    "hyprland/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": true,
-        "format": "{name}"
+    "group/pill#right1": {
+        "modules": [
+            "backlight",
+            "network",
+            "pulseaudio",
+            "pulseaudio#microphone",
+            "custom/updates",
+            "custom/keybindhint"
+        ],
+        "orientation": "inherit"
     },
-
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 60,
-        "separate-outputs": true
+    "group/pill#right2": {
+        "modules": [
+            "privacy",
+            "tray",
+            "battery"
+        ],
+        "orientation": "inherit"
     },
-
-    "tray": {
-        "icon-size": 18,
-        "spacing": 8
-    },
-
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰝟 muted",
-        "format-icons": {
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-
-    "network": {
-        "format-wifi": " {essid}",
-        "format-ethernet": "󰈀 connected",
-        "format-disconnected": "󰖪 disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}"
-    },
-
-    "clock": {
-        "format": "{:%H:%M}",
-        "tooltip-format": "{:%A, %d %B %Y}"
+    "group/pill#right3": {
+        "modules": [
+            "custom/wallchange",
+            "custom/theme",
+            "custom/wbar",
+            "custom/cliphist",
+            "custom/hyde-menu",
+            "custom/power"
+        ],
+        "orientation": "inherit"
     }
 }
