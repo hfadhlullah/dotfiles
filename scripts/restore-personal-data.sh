@@ -3,6 +3,10 @@ set -euo pipefail
 
 BACKUP_ROOT="${1:-/mnt/adata-sx8200/home-backup/rzr/machine-backup}"
 
+mkdir -p "$HOME/.config/gh"
+
+rsync -a "$BACKUP_ROOT/git/git-credentials" "$HOME/.git-credentials"
+rsync -a "$BACKUP_ROOT/git/gh/" "$HOME/.config/gh/"
 rsync -a "$BACKUP_ROOT/ssh/" "$HOME/.ssh/"
 rsync -a "$BACKUP_ROOT/gnupg/" "$HOME/.gnupg/"
 rsync -a "$BACKUP_ROOT/zen/profile/" "$HOME/.zen/lqw2ej9y.Default (release)/"

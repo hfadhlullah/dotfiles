@@ -6,6 +6,7 @@ ZEN_PROFILE_ROOT="$HOME/.zen/lqw2ej9y.Default (release)"
 ZEN_PROFILE_CACHE="$HOME/.cache/zen/lqw2ej9y.Default (release)"
 
 mkdir -p \
+  "$BACKUP_ROOT/git/gh" \
   "$BACKUP_ROOT/ssh" \
   "$BACKUP_ROOT/gnupg" \
   "$BACKUP_ROOT/zen/profile" \
@@ -17,6 +18,8 @@ mkdir -p \
   "$BACKUP_ROOT/opencode/cache" \
   "$BACKUP_ROOT/manifests"
 
+rsync -a "$HOME/.git-credentials" "$BACKUP_ROOT/git/git-credentials"
+rsync -a --delete "$HOME/.config/gh/" "$BACKUP_ROOT/git/gh/"
 rsync -a --delete "$HOME/.ssh/" "$BACKUP_ROOT/ssh/"
 rsync -a --delete "$HOME/.gnupg/" "$BACKUP_ROOT/gnupg/"
 rsync -a --delete "$ZEN_PROFILE_ROOT/" "$BACKUP_ROOT/zen/profile/"

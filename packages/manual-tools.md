@@ -26,6 +26,11 @@
 - SSH: `~/.ssh/`
 - GPG: `~/.gnupg/`
 
+## Git auth state
+
+- Git credentials: `~/.git-credentials`
+- GitHub CLI config/auth: `~/.config/gh/`
+
 ## Notes
 
 - `dotfiles` restore your shell/editor/terminal config, but not SDK contents.

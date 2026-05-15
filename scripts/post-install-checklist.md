@@ -4,13 +4,13 @@
 2. Clone `~/dotfiles`.
 3. Run `./setup-2.sh`.
 4. Run `scripts/bootstrap-packages.sh`.
-5. Restore SSH and GPG backups.
-6. Restore Zen active profile and Chromium profile.
-7. Restore OpenCode config/data/state/cache.
-8. Reinstall/manual-restore:
+5. Run `scripts/restore-personal-data-tui.sh`.
+6. Select the backups you want to restore.
+7. Reinstall/manual-restore:
    - `forge`
    - `nvm` and Node version
    - Flutter SDK
    - Android SDK
-9. Verify expected commands from `packages/expected-tools.txt`.
+8. Verify expected commands from `packages/expected-tools.txt`.
+9. Run `gh auth status` if you restored GitHub CLI.
 10. Log out/in if desktop or session settings are missing.
